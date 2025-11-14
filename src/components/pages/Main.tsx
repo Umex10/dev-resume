@@ -1,9 +1,9 @@
 import React from 'react'
-import Hero from './Hero'
+import Hero from './hero/Hero'
 
 const Main = () => {
   return (
-    <main className='max-w-7xl mx-auto px-4 pt-10'>
+    <main className='max-w-7xl mx-auto px-4 pt-6 md:pt-0'>
       <Hero/>
     </main>
   )

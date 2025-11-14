@@ -12,7 +12,7 @@ export const heroCard = {
     status: {
       available: true,
       text: "Available for work",
-      color: "green", // optional, falls du später mal "busy" etc. anzeigen willst
+      color: "green", 
     },
   },
   socials: [
@@ -46,7 +46,7 @@ export const heroCard = {
    download: {
       label: "Download CV",
       icon: Download,
-      href: "/Umejr-Dzinovic-CV.pdf", // oder null, wenn du später den Download-Handler einbaust
+      href: "/Umejr-Dzinovic-CV.pdf", 
       variant: "default",
     },
    contact: {
