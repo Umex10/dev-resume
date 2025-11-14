@@ -1,4 +1,5 @@
 /** @type {import("tailwindcss").Config} */
+import tailwindcssAnimate from "tailwindcss-animate";
 module.exports = {
     darkMode: ["class"],
     content: [
@@ -24,9 +25,9 @@ module.exports = {
   				DEFAULT: 'hsl(var(--popover))',
   				foreground: 'hsl(var(--popover-foreground))'
   			},
-  			primary: {
-  				DEFAULT: 'hsl(var(--primary))',
-  				foreground: 'hsl(var(--primary-foreground))'
+  			haupt: {
+  				DEFAULT: 'hsl(var(--haupt))',
+  				foreground: 'hsl(var(--haupt-foreground))'
   			},
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
@@ -57,5 +58,5 @@ module.exports = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 }
