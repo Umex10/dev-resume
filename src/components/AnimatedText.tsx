@@ -6,13 +6,13 @@ export default function AnimatedText() {
   return (
     <TypeAnimation
       sequence={[
-        "Fullstack Engineer",
+        "Fullstack Dev",
         2000,
          "Kicker",
         2000,
         "Culés",
         2000,
-        "Testing Enthusiast",
+        "Testing Dev",
         2000
       ]}
       wrapper="span"
