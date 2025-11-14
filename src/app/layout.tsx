@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SmoothScroll from "@/components/SmoothScroll";
 
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
@@ -17,6 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <SmoothScroll/>
           {children}
         </ThemeProvider>
       </body>
