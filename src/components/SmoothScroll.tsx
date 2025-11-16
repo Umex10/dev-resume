@@ -12,6 +12,8 @@ export default function SmoothScroll() {
       easing: (t) => 1 - Math.pow(1 - t, 3), // smooth easing cubic
     });
 
+     window.lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
