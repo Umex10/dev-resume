@@ -33,16 +33,42 @@ const countCategories = (): Record<string, number> => {
 export const calculateAmounts = () => {
   const total = Object.values(countCategories()).reduce((sum, x) => sum + x, 0);
 
-  const amounts = Object.fromEntries(
+  return Object.fromEntries(
     Object.entries(countCategories()).map(([category, count]) => [
       category,
       Math.round((count / total) * 100)
     ])
   );
 
-  return amounts;
+
+}
+// To calculate how good I am in a specific field considering the 
+// mentioned technologies. f.e: tailwind, ts -> frontend
+const summarizeCategoryLevels = (): Record<string, number> =>  {
+  return skills.reduce(
+    (acc, skill) => {
+      const cat = skill.category.toLowerCase();
+      acc[cat] = (acc[cat] || 0) + skill.level;
+      return acc;
+    },
+    {} as Record<string, number>
+  );
 }
 
+export const calculateSkillLevel = () => {
+
+  const countedCategories = countCategories();
+
+  return Object.fromEntries(
+    Object.entries(summarizeCategoryLevels()).map(([category, summarizedValue]) => [
+        category,
+        summarizedValue / countedCategories[category]
+    ])
+  );
+}
+
+
+// returns a color scheme for the chart
 export const handleColor = (type: string): SkillColor => {
    const category = categoryMap[type.toLowerCase()];
 

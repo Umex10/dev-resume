@@ -8,18 +8,9 @@ import {
   NavigationMenuLink,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { handleLenisScroll } from "@/lib/lenisScroll";
 
 export function DesktopNavbar() {
-  const handleLenisScroll = (e: React.MouseEvent, target: string) => {
-    e.preventDefault();
-
-    const HEADER_OFFSET = 64;
-
-    window.lenis?.scrollTo(target, {
-      offset: -HEADER_OFFSET,
-      duration: 1.2,
-    });
-  };
 
   return (
     <div className="hidden md:flex items-center gap-4">

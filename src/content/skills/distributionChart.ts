@@ -4,6 +4,19 @@ import {
 } from "@/components/ui/chart"
 
 import { calculateAmounts } from "./skills";
+import { CardContentInterface } from "@/types/cardContent";
+
+
+export const distributionContent: CardContentInterface = {
+  header: {
+    title: "Skill Mix",
+    desc: "Share / category",
+  },
+  footer: {
+    title: "Focus across backend, frontend & devops",
+  },
+};
+
 
 export const amounts = calculateAmounts();
 

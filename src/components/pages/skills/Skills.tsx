@@ -2,13 +2,16 @@
 import SkillBar from "react-skillbars";
 import { motion } from "framer-motion";
 
-
-import { Chart } from "./Chart";
 import { handleColor, skills } from "@/content/skills/skills";
+import ChartCard from "./charts/ChartCard";
+import KreisChart from "./charts/KreisChart";
+import BarVerticalChart from "./charts/BarVerticalChart";
+import {skillContent } from "@/content/skills/skillLevelChart";
+import { distributionContent } from "@/content/skills/distributionChart";
 
 const Skills = () => {
   return (
-    <section id="skills" className="md:min-h-[calc(100vh-4.5rem)] scroll-mt-[64px]
+    <section id="skills" className="md:min-h-[calc(100vh-4.563rem)]
      w-full py-12 flex flex-col gap-10">
       <motion.h2
         className="text-3xl font-bold tracking-tight text-center"
@@ -20,10 +23,15 @@ const Skills = () => {
         Skills
       </motion.h2>
 
-      <div className="h-full w-full flex flex-col gap-4 lg:flex-row">
-        <Chart></Chart>
+      <div className="h-full w-full flex flex-col gap-4 lg:flex-row
+      lg:items-stretch">
+        <div className="w-full flex flex-col gap-4 lg:h-full lg:flex-1">
+            <ChartCard cardContent={skillContent}> <KreisChart></KreisChart> </ChartCard>
+            <ChartCard cardContent={distributionContent}> <BarVerticalChart></BarVerticalChart> </ChartCard>
+        </div>
+        
            <div className="flex flex-col gap-4 w-full max-w-3xl mx-auto">
-        {skills.map((skill, index) => (
+        {skills.map((skill) => (
           <div key={skill.type} className="w-full">
             {/* Icon + Titel */}
             <div className="flex items-center gap-4 mb-2 px-1">
@@ -46,7 +54,8 @@ const Skills = () => {
                 , level: skill.level }]}
               colors={handleColor(skill.type)}
               height={20}
-              animationDelay={index * 150}
+              animationDuration={1400}
+              animationDelay={200}
             />
           </div>
         ))}
