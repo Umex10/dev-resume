@@ -15,13 +15,13 @@ import { ArrowUpRight } from 'lucide-react';
 import { Github } from 'lucide-react';
 
 export default function Apps() {
-  // show more function
+  // "show more" function
   const [visibleCount, setVisibleCount] = useState(3);
 
   const displayedApps = apps.slice(0, visibleCount);
 
   return (
-    <section id="apps" className="md:min-h-[calc(100vh-4.5rem)] scroll-mt-[64px]
+    <section id="apps" className="md:min-h-[calc(100vh-4.563rem)]
      w-full py-12 flex flex-col gap-10">
       {/* Title animation */}
       <motion.h2

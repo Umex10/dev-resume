@@ -4,6 +4,8 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import Link from "next/link";
+import { handleLenisScroll } from "@/lib/lenisScroll";
 
 export default function MobileNavbar() {
   const [open, setOpen] = useState(false);
@@ -18,27 +20,42 @@ export default function MobileNavbar() {
 
       <SheetContent side="right" className="w-[250px]">
         <nav className="flex flex-col gap-4 mt-8">
-          <a
-            onClick={() => setOpen(false)}
-            href="#about"
+          <Link
+             onClick={(e) => {
+            setOpen(false);
+            handleLenisScroll(e, "#home")}}
+            href="#home"
             className="text-lg hover:underline"
           >
             About
-          </a>
-          <a
-            onClick={() => setOpen(false)}
-            href="#projects"
+          </Link>
+          <Link
+             onClick={(e) => {
+            setOpen(false);
+            handleLenisScroll(e, "#apps")}}
+            href="#apps"
             className="text-lg hover:underline"
           >
-            Projects
-          </a>
-          <a
-            onClick={() => setOpen(false)}
+            Apps
+          </Link>
+          <Link
+            onClick={(e) => {
+            setOpen(false);
+            handleLenisScroll(e, "#skills")}}
+            href="#skills"
+            className="text-lg hover:underline"
+          >
+            Skills
+          </Link>
+            <Link
+            onClick={(e) => {
+            setOpen(false);
+            handleLenisScroll(e, "#contact")}}
             href="#contact"
             className="text-lg hover:underline"
           >
             Contact
-          </a>
+          </Link>
         </nav>
       </SheetContent>
     </Sheet>

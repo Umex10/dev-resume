@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 export const metadata: Metadata = {
   title: "Umejr Dzinovic – Dev Resume",
   description:
-    "A clean and modern developer resume showcasing skills in Spring Boot, Next.js, full-stack development, and personal projects.",
+    "A clean and modern developer resume showcasing skills in S-Boot, Next.js, full-stack development, and personal projects.",
   keywords: [
     "Dev Resume",
     "Full Stack Developer",
