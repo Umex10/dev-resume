@@ -21,7 +21,8 @@ export default function Apps() {
   const displayedApps = apps.slice(0, visibleCount);
 
   return (
-    <section className="md:min-h-[calc(100vh-4.5rem)] w-full py-12 flex flex-col gap-10">
+    <section id="apps" className="md:min-h-[calc(100vh-4.5rem)] scroll-mt-[64px]
+     w-full py-12 flex flex-col gap-10">
       {/* Title animation */}
       <motion.h2
         className="text-3xl font-bold tracking-tight text-center"

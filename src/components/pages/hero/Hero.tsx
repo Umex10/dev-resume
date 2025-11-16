@@ -5,7 +5,8 @@ import HeroText from "./HeroText";
 
 function Hero() {
   return (
-    <section className="md:min-h-[calc(100vh-4.5rem)] flex flex-col w-full
+    <section id="home" className="md:min-h-[calc(100vh-4.5rem)] scroll-mt-[64px]
+     flex flex-col w-full
      items-center gap-4 md:gap-8 md:justify-center
      lg:gap-16 lg:flex lg:flex-row ">
 
