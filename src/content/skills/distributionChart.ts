@@ -13,7 +13,7 @@ export const distributionContent: CardContentInterface = {
     desc: "Share / category",
   },
   footer: {
-    title: "Focus across backend, frontend & devops",
+    title: "Focus across fields",
   },
 };
 

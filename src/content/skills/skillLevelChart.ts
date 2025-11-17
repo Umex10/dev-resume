@@ -8,7 +8,7 @@ export const skillContent: CardContentInterface = {
     desc: "Based on selected technologies",
   },
   footer: {
-    title: "Summed up skill levels per category",
+    title: "Summed up skill levels",
   },
 };
 

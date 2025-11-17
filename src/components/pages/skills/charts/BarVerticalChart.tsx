@@ -11,6 +11,7 @@ import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts";
 
 const BarVerticalChart = () => {
 
+    // Necessary for delayed animation
     const chartRef = useRef<HTMLDivElement | null>(null);
     const [isVisible, setIsVisible] = useState(false);
   
