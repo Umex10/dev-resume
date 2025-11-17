@@ -1,7 +1,8 @@
-import React from 'react'
 import Hero from './hero/Hero'
 import Apps from './apps/Apps'
 import Skills from './skills/Skills'
+import Contact from './contact/Contact'
+
 
 const Main = () => {
   return (
@@ -9,6 +10,7 @@ const Main = () => {
       <Hero/>
       <Apps/>
       <Skills/>
+      <Contact/>
     </main>
   )
 }

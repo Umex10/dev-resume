@@ -13,6 +13,8 @@ import { chartConfig, chartData } from "@/content/skills/distributionChart";
 import { useEffect, useRef, useState } from "react";
 
 const KreisChart = () => {
+
+  // Necessary for delayed animation
   const chartRef = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 

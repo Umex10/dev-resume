@@ -1,6 +1,5 @@
 "use client";
 import SkillBar from "react-skillbars";
-import { motion } from "framer-motion";
 
 import { handleColor, skills } from "@/content/skills/skills";
 import ChartCard from "./charts/ChartCard";
@@ -8,20 +7,14 @@ import KreisChart from "./charts/KreisChart";
 import BarVerticalChart from "./charts/BarVerticalChart";
 import {skillContent } from "@/content/skills/skillLevelChart";
 import { distributionContent } from "@/content/skills/distributionChart";
+import SectionHeading from "@/components/ui/section-heading";
+import { BadgeCheck } from "lucide-react";
 
 const Skills = () => {
   return (
     <section id="skills" className="md:min-h-[calc(100vh-4.563rem)]
      w-full py-12 flex flex-col gap-10">
-      <motion.h2
-        className="text-3xl font-bold tracking-tight text-center"
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        viewport={{ once: true }}
-      >
-        Skills
-      </motion.h2>
+     <SectionHeading icon={BadgeCheck} heading="Skills"></SectionHeading>
 
       <div className="h-full w-full flex flex-col gap-4 lg:flex-row
       lg:items-stretch">

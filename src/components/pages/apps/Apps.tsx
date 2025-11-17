@@ -11,8 +11,9 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { apps } from "@/content/app/app";
-import { ArrowUpRight } from 'lucide-react';
+import { Dna, ArrowUpRight } from 'lucide-react';
 import { Github } from 'lucide-react';
+import SectionHeading from "@/components/ui/section-heading";
 
 export default function Apps() {
   // "show more" function
@@ -24,15 +25,7 @@ export default function Apps() {
     <section id="apps" className="md:min-h-[calc(100vh-4.563rem)]
      w-full py-12 flex flex-col gap-10">
       {/* Title animation */}
-      <motion.h2
-        className="text-3xl font-bold tracking-tight text-center"
-        initial={{ opacity: 0, y: -15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-        viewport={{ once: true }}
-      >
-        Featured Apps
-      </motion.h2>
+     <SectionHeading icon={Dna} heading="Apps"></SectionHeading>
 
       <div
         className="
