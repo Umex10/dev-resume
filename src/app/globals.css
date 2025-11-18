@@ -66,3 +66,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media (min-width: 768px) {
+  .footer-shift-md {
+    transform: translateY(-18.82rem);
+  }
+}
