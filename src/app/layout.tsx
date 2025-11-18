@@ -32,9 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-       <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-        <SmoothScroll/>
+      <body className="min-h-screen flex flex-col">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SmoothScroll />
           {children}
         </ThemeProvider>
       </body>
