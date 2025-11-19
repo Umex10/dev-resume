@@ -32,8 +32,8 @@ const HeroText = () => {
             transition={{ delay: 0.3 }}
             className="block"
           >
-            <span className="text-white font-normal">{identity.start} </span>
-            <span className="text-white italic">{identity.name}</span>,
+            <span className="font-normal">{identity.start} </span>
+            <span className="italic">{identity.name}</span>,
           </motion.span>
 
           <motion.span
@@ -49,7 +49,7 @@ const HeroText = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className="text-white font-normal opacity-90"
+            className="font-normal opacity-90"
           >
             {identity.location}
           </motion.span>

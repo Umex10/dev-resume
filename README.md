@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Job Seeking (3rd semester)**: I am currently in my 3rd semester and urgently looking for a job or internship where I can learn, grow, and contribute. This resume site demonstrates my skills, apps, and contact information.
 
-## Getting Started
+**Project**: Dev Resume
 
-First, run the development server:
+This rep is a developer resume built with Next.js. It showcases apps, skills, and contact functionality (email via Resend). The site is designed as a modern single-page resume built with reusable React com's and Tailwind CSS.
+
+Key highlights:
+- Clean, com-driven UI (header, hero, apps, skills, contact, footer).
+- Interactive app cards with animations (Framer Motion).
+- Charts and skill visualizations using `recharts`.
+- Contact form that sends email via the `resend` service (server-side function).
+
+Tech stack
+- Next.js 16 (App Router)
+- React 19 + TypeScript
+- Tailwind CSS with `tailwindcss-animate` and `@tailwindcss/line-clamp`
+- Framer Motion for animations
+- Recharts for charts
+- Resend for transactional email sending
+- Zod and `react-hook-form` for form validation
+
+How to run (local)
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Set required environment variables (example):
+
+```bash
+export RESEND_API_KEY="your_resend_api_key"
+```
+
+3. Start dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Files & structure (high level)
+- `app/layout.tsx` — Root layout and theme provider.
+- `app/page.tsx` — Main entry (composes `Header`, `Main`, and `Footer`).
+- `src/components/header/*` — `Header`, `DesktopNavbar`, `MobileNavbar`, `ModeToggle`, and `Logo` com's.
+- `src/components/pages/hero/*` — Hero section (`Hero`, `HeroCard`, `HeroText`).
+- `src/components/pages/apps/Apps.tsx` — App cards and demo/github links.
+- `src/components/footer/Footer.tsx` — Footer with avatar and contact blurb.
+- `src/components/ui/*` — Reusable UI elements: `Card`, `Button`, `Input`, `SectionHeading`, etc.
+- `src/lib/email.ts` — Server-side function to send email using `resend`.
+- `src/lib/formSchema.ts` — Zod schema for contact form validation.
+- `src/content/*` — Structured content (apps, skills, header, footer text) used by components.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Notes and environment
+- The contact form uses `RESEND_API_KEY` for the `resend` service. Keep it secret and add it to your environment (e.g., `.env.local`).
+- The project uses `next-themes` to toggle light/dark mode.
+- Images referenced under `public/` (e.g., `image.jpg`, `og-image.jpg`) are used across the site.
 
-## Learn More
+If you want, I can:
+- Tweak the README wording or add a short cover letter section oriented to recruiters.
+- Add a `CONTRIBUTING.md` or deployment instructions to Vercel.
 
-To learn more about Next.js, take a look at the following resources:
+Contact
+- The site includes a contact form wired to send emails to the configured address. You can also find contact details in `src/content/footer/footer`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
