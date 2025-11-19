@@ -6,14 +6,13 @@ import {
 import { calculateAmounts } from "./skills";
 import { CardContentInterface } from "@/types/cardContent";
 
-
 export const distributionContent: CardContentInterface = {
   header: {
-    title: "Skill Mix",
-    desc: "Share / category",
+    title: "Category Strength",
+    desc: "Averaged skill level / category",
   },
   footer: {
-    title: "Focus across fields",
+    title: "Combined scores",
   },
 };
 

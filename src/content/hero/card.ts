@@ -1,6 +1,5 @@
-import { Github, Linkedin, Youtube, Instagram, Twitter, Download, Send } from "lucide-react"
+import { Github, Linkedin, Youtube, Instagram, Twitter, Download, Send, Mail } from "lucide-react"
 
-// 🧠 Hauptobjekt: CardContent
 export const heroCard = {
   image: {
     src: "/image.jpg",
@@ -17,19 +16,9 @@ export const heroCard = {
   },
   socials: [
     {
-      name: "Instagram",
-      href: "https://instagram.com/umex10",
-      icon: Instagram,
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/umex10",
-      icon: Twitter,
-    },
-    {
-      name: "YouTube",
-      href: "https://youtube.com/@umex10",
-      icon: Youtube,
+      name: "Gmail",
+      href: "mailto:umi.dzinovic10@gmail.com",
+      icon: Mail,
     },
     {
       name: "GitHub",
@@ -38,7 +27,7 @@ export const heroCard = {
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/umex10",
+      href: "https://www.linkedin.com/in/umejr-dzinovic-4083a6343/",
       icon: Linkedin,
     },
   ],

@@ -8,7 +8,7 @@ export const contactInfo = [
     {
       icon: VscCallIncoming,
       label: "Contact No",
-      value: "+43 555 6331222",
+      value: "+43 681 10892976",
       type: "phone"
     },
     {
@@ -20,7 +20,7 @@ export const contactInfo = [
     {
       icon: LocateFixed,
       label: "Location",
-      value: "Graz, 8020",
+      value: "Werk-VI-Straße 46, 8605 Kapfenberg",
       type: "address"
     },
   ];

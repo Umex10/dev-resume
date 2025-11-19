@@ -9,7 +9,7 @@ import DockerIcon from "/public/docker.svg";
 export const skills = [
   { type: "java", icon: JavaIcon, level: 70, category: "backend"},
   { type: "S-Boot", icon: SpringIcon, level: 35, category: "backend" },
-  { type: "typescript", icon: TypescriptIcon, level: 50, category: "frontend" },
+  { type: "TS", icon: TypescriptIcon, level: 50, category: "frontend" },
   { type: "tailwind", icon: TailwindIcon, level: 75, category: "frontend" },
   { type: "react", icon: ReactIcon, level: 45, category: "frontend" },
   { type: "nextJS", icon: NextJsIcon, level: 30, category: "frontend" },

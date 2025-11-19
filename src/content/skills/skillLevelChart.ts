@@ -4,12 +4,12 @@ import { CardContentInterface } from "@/types/cardContent";
 
 export const skillContent: CardContentInterface = {
   header: {
-    title: "Skill Level",
-    desc: "Based on selected technologies",
+    title: "Tech Distribution",
+    desc: "Share of technologies / category",
   },
   footer: {
-    title: "Summed up skill levels",
-  },
+  title: "Category distribution overview",
+},
 };
 
 export const levels = calculateSkillLevel();

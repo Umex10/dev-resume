@@ -12,13 +12,13 @@ export const textContent = {
 
    desc: {
     firstText: "I specialize in building stable backends with",
-    firstTech: "Spring Boot",
+    firstTech: "S-Boot",
 
     secondText: "and creating sleek, modern frontends using",
     secondTech: "Next.js",
 
     thirdText: "For a while now, I’ve been honing my skills across both sides of development, aiming to become a well-rounded",
-    thirdTech: "Full Stack Developer",
+    thirdTech: "Full Stack Dev",
 
     forthText: "I love bringing ideas to life through clean, functional design — making sure every project not only works perfectly, but feels great to use.",
   },
