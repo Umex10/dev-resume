@@ -5,12 +5,13 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://dev-resume-sigma.vercel.app"),
   title: "Umejr Dzinovic – Dev Resume",
   description:
     "A clean and modern developer resume showcasing skills in S-Boot, Next.js, full-stack development, and personal projects.",
   keywords: [
     "Dev Resume",
-    "Full Stack Developer",
+    "Full Stack Dev",
     "Spring Boot",
     "Next.js",
     "Software Engineer",
@@ -20,8 +21,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Umejr Dzinovic – Dev Resume",
     description:
-      "Dive into my dev resume, skills, knowledge, and full-stack apps built with Spring Boot and Next.js.",
-    images: ["/og-image.jpg"],
+      "Dive into my dev resume, skills, knowledge, and full-stack apps built with S-Boot and Next.js.",
+    images: ["/image.jpg"],
   },
 };
 

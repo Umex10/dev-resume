@@ -8,11 +8,11 @@ export default function AnimatedText() {
       sequence={[
         "Fullstack Dev",
         2000,
-         "Kicker",
+         "Backend Artisan",
         2000,
-        "Culés",
+        "Frontend Craftsman",
         2000,
-        "Testing Dev",
+        "Testing Devotee",
         2000
       ]}
       wrapper="span"
