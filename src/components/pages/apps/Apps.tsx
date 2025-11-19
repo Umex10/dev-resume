@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { apps } from "@/content/app/app";
-import { Dna, ArrowUpRight } from "lucide-react";
+import { ShieldCheck, ArrowUpRight } from "lucide-react";
 import { Github } from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
 
@@ -28,7 +28,7 @@ export default function Apps() {
      w-full py-12 flex flex-col gap-10"
     >
       {/* Title animation */}
-      <SectionHeading icon={Dna} heading="Apps"></SectionHeading>
+      <SectionHeading icon={ShieldCheck} heading="Apps"></SectionHeading>
 
       <div
         className="

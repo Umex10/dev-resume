@@ -20,7 +20,7 @@ export const contactInfo = [
     {
       icon: LocateFixed,
       label: "Location",
-      value: "Graz, 8020",
+      value: "[removed]",
       type: "address"
     },
   ];

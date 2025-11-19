@@ -61,9 +61,11 @@ import { handleLenisScroll } from "@/lib/lenisScroll";
             >
               {heroCard.socials.map((element) => (
                 <li key={element.name}>
-                  <Button variant="outline" className="p-2">
+                  <a href={element.href}>
+                    <Button variant="outline" className="p-2">
                     {<element.icon></element.icon>}
                   </Button>
+                  </a>
                 </li>
               ))}
             </motion.ul>
