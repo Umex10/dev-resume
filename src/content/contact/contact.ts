@@ -1,4 +1,4 @@
-import { MonitorDown } from "lucide-react";
+import { VscCallIncoming } from "react-icons/vsc";
 import { Mail } from 'lucide-react';
 import { LocateFixed } from 'lucide-react';
 
@@ -6,19 +6,22 @@ import { LocateFixed } from 'lucide-react';
 
 export const contactInfo = [
     {
-      icon: MonitorDown,
+      icon: VscCallIncoming,
       label: "Contact No",
       value: "+43 555 6331222",
+      type: "phone"
     },
     {
       icon: Mail,
       label: "Email",
       value: "umi.dzinovic10@gmail.com",
+      type: "email"
     },
     {
       icon: LocateFixed,
-      label: "Address",
-      value: "Algersdorfer Straße 53, 8020",
+      label: "Location",
+      value: "Graz, 8020",
+      type: "address"
     },
   ];
 

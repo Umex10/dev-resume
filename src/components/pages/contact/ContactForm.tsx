@@ -19,17 +19,13 @@ import { contactForm } from "@/content/contact/contact";
 import { formSchema } from "@/lib/formSchema";
 import { send } from "@/actions/send";
 
-
 type FormValues = z.infer<typeof formSchema>;
 
 export default function ContactForm() {
-
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
-    // Clarify when to check for the error messages.
     mode: "onBlur",
     reValidateMode: "onChange",
-    // This will be filled in when form is getting rendered for the first time
     defaultValues: {
       fullName: "",
       email: "",
@@ -38,14 +34,13 @@ export default function ContactForm() {
     },
   });
 
-  // Submit handler
   function onSubmit(values: FormValues) {
     send(values);
     console.log("Form submitted with values:", values);
     form.reset();
   }
 
-  const formContent = contactForm; 
+  const formContent = contactForm;
   const inputBg = "bg-neutral-900/50";
 
   return (
@@ -59,7 +54,7 @@ export default function ContactForm() {
       <Card className="border-none">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
-            
+
             {/* Full Name Field */}
             <FormField
               control={form.control}
@@ -69,7 +64,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Input
                       placeholder={formContent.input.name}
-                      className={inputBg}
+                      className={`${inputBg} md:h-11 md:text-base`}
                       {...field}
                     />
                   </FormControl>
@@ -88,7 +83,7 @@ export default function ContactForm() {
                     <Input
                       type="email"
                       placeholder={formContent.input.email}
-                      className={inputBg}
+                      className={`${inputBg} md:h-11 md:text-base`}
                       {...field}
                     />
                   </FormControl>
@@ -107,7 +102,7 @@ export default function ContactForm() {
                     <Input
                       type="tel"
                       placeholder={formContent.input.number}
-                      className={inputBg}
+                      className={`${inputBg} md:h-11 md:text-base`}
                       {...field}
                     />
                   </FormControl>
@@ -125,7 +120,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Textarea
                       placeholder={formContent.input.message}
-                      className={`resize-none min-h-32 bg-neutral-900/50 ${inputBg}`}
+                      className={`resize-none min-h-32 md:min-h-36 md:text-base bg-neutral-900/50 ${inputBg}`}
                       {...field}
                     />
                   </FormControl>
@@ -138,11 +133,12 @@ export default function ContactForm() {
             <Button
               type="submit"
               variant="green"
-              className="w-full text-zinc-800"
+              className="w-full text-zinc-800 md:h-11 md:text-base"
               disabled={form.formState.isSubmitting}
             >
               {formContent.button.value}
             </Button>
+
           </form>
         </Form>
       </Card>

@@ -9,7 +9,7 @@ export default function Footer() {
   return (
     <footer
       className="relative w-full border-t py-8 bg-background/80 backdrop-blur-md
-      -mt-[18.82rem] will-change-transform"
+      md:-mt-[18.82rem] md:will-change-transform"
       style={{ transform: 'translateZ(0)' }}
     >
       <div

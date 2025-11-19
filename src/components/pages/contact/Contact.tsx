@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import ContactForm from "./ContactForm";
 import { Send } from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
+import { handleContactClick } from "@/lib/contactClick";
 
 const Contact = () => {
   return (
@@ -39,10 +40,25 @@ const Contact = () => {
               transition={{ duration: 0.4, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="w-full bg-neutral-900/50">
-                <CardHeader className="flex flex-row items-center gap-3 px-2 py-3">
+              <Card
+                className="group relative w-full bg-neutral-900/50 cursor-pointer
+  overflow-hidden transition-all duration-300
+  hover:shadow-lg hover:scale-[1.01]"
+                onClick={() => handleContactClick(info)}
+              >
+                {/* Emerald Hover Overlay */}
+                <div
+                  className="
+      pointer-events-none absolute inset-0 opacity-0
+      group-hover:opacity-100 transition-opacity duration-500
+      bg-gradient-to-br from-emerald-400/15 via-green-500/10 to-emerald-500/15
+    "
+                ></div>
+
+                <CardHeader className="flex flex-row items-center gap-3 px-2 py-3 relative z-10">
                   <info.icon
-                    className="w-6 h-6 md:w-8 md:h-8 text-green-500"
+                    className="w-7 h-7 md:w-8 md:h-8 text-green-500 mt-0.5
+      transition-colors duration-300 group-hover:text-emerald-400"
                   />
 
                   <div className="flex flex-col">
@@ -60,8 +76,7 @@ const Contact = () => {
           ))}
         </motion.div>
 
-          <ContactForm></ContactForm>
-
+        <ContactForm></ContactForm>
       </motion.div>
     </section>
   );
