@@ -11,8 +11,8 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { apps } from "@/content/app/app";
-import { Dna, ArrowUpRight } from 'lucide-react';
-import { Github } from 'lucide-react';
+import { Dna, ArrowUpRight } from "lucide-react";
+import { Github } from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
 
 export default function Apps() {
@@ -22,10 +22,13 @@ export default function Apps() {
   const displayedApps = apps.slice(0, visibleCount);
 
   return (
-    <section id="apps" className="md:min-h-[calc(100vh-4.563rem)]
-     w-full py-12 flex flex-col gap-10">
+    <section
+      id="apps"
+      className="md:min-h-[calc(100vh-4.563rem)]
+     w-full py-12 flex flex-col gap-10"
+    >
       {/* Title animation */}
-     <SectionHeading icon={Dna} heading="Apps"></SectionHeading>
+      <SectionHeading icon={Dna} heading="Apps"></SectionHeading>
 
       <div
         className="
@@ -46,10 +49,22 @@ export default function Apps() {
             viewport={{ once: true }}
           >
             <Card
-              className="overflow-hidden border-border
-             hover:shadow-xl transition-all duration-300
-             flex flex-col h-full"
+              className="group relative overflow-hidden border-border
+                hover:shadow-xl transition-all duration-300
+                flex flex-col h-full cursor-pointer
+                hover:scale-[1.01]"
+              onClick={() => app.demo && window.open(app.demo)}
             >
+              {/* EMERALD HOVER OVERLAY */}
+              <div
+                className="
+                  pointer-events-none absolute inset-0 opacity-0
+                  group-hover:opacity-100 transition-opacity duration-500
+                  bg-gradient-to-br from-emerald-400/20 via-green-500/10 to-emerald-500/20
+                  backdrop-blur-[1px]
+                "
+              ></div>
+
               <CardHeader className="p-0">
                 {/* Image animation */}
                 <motion.div
@@ -88,9 +103,11 @@ export default function Apps() {
                 >
                   {app.desc}
                 </motion.p>
-                  {/* SPACER – Only meant for equal spaces */}
-                  <div className="flex-1"></div>
-                {/* Tags animation */}
+
+                {/* SPACER */}
+                <div className="flex-1"></div>
+
+                {/* Tags */}
                 <motion.div
                   className="flex flex-wrap gap-2 mt-2"
                   initial="hidden"
@@ -105,7 +122,6 @@ export default function Apps() {
                     },
                   }}
                 >
-                
                   {app.tags.map((tag) => (
                     <motion.span
                       key={tag}
@@ -122,17 +138,24 @@ export default function Apps() {
                 </motion.div>
               </CardContent>
 
-              {/* Buttons animation */}
-              <CardFooter className={`flex justify-between p-2
-              ${!app.demo ? "justify-end" : ""}`}>
+              {/* Buttons */}
+              <CardFooter
+                className={`flex justify-between p-2 ${
+                  !app.demo ? "justify-end" : ""
+                }`}
+              >
                 {app.demo && (
                   <motion.div whileTap={{ scale: 0.95 }}>
                     <Button
                       variant="default"
                       size="sm"
-                      onClick={() => window.open(app.demo)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(app.demo);
+                      }}
                     >
-                      <ArrowUpRight></ArrowUpRight>Live Demo
+                      <ArrowUpRight />
+                      Live Demo
                     </Button>
                   </motion.div>
                 )}
@@ -142,9 +165,13 @@ export default function Apps() {
                     <Button
                       variant="outline"
                       size="sm"
-                      onClick={() => window.open(app.github)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open(app.github);
+                      }}
                     >
-                     <Github></Github>GitHub
+                      <Github />
+                      GitHub
                     </Button>
                   </motion.div>
                 )}
@@ -162,7 +189,21 @@ export default function Apps() {
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <Button variant="secondary" onClick={() => setVisibleCount(5)}>
-            Mehr anzeigen
+            Show more
+          </Button>
+        </motion.div>
+      )}
+
+      {/* Show Less Button */}
+      {visibleCount >= 5 && (
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
+          <Button variant="secondary" onClick={() => setVisibleCount(3)}>
+            Show less
           </Button>
         </motion.div>
       )}

@@ -6,6 +6,7 @@ import { StatusBadge } from "../../StatusBadge";
 import { heroCard } from "@/content/hero/card";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { motion } from "framer-motion";
+import { handleLenisScroll } from "@/lib/lenisScroll";
   
   const HeroCard = () => {
     return (
@@ -78,10 +79,14 @@ import { motion } from "framer-motion";
               transition={{ delay: 0.35 }}
               className="w-full"
             >
-              <Button type="submit" variant="green" className="w-full text-zinc-800 min-w-[100px]">
+              {/* Download CV */}
+              <a href="umejr-dzinovic-cv.pdf" download>
+                  <Button type="submit" variant="green" className="w-full text-zinc-800 min-w-[100px]">
                 {<heroCard.actions.download.icon></heroCard.actions.download.icon>}
                 {heroCard.actions.download.label}
               </Button>
+              </a>
+            
             </motion.div>
 
             <motion.div
@@ -90,7 +95,9 @@ import { motion } from "framer-motion";
               transition={{ delay: 0.45 }}
               className="w-full"
             >
-              <Button variant="outline" className="w-full text-zinc-800 dark:text-zinc-200 min-w-[100px]">
+
+              <Button variant="outline" className="w-full text-zinc-800 dark:text-zinc-200 min-w-[100px]"
+              onClick={(e) => handleLenisScroll(e, "#contact")}>
                 {<heroCard.actions.contact.icon></heroCard.actions.contact.icon>}
                 {heroCard.actions.contact.label}
               </Button>
