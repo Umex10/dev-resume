@@ -7,20 +7,20 @@ export const textContent = {
   identity: {
     start: "I'm",
     name: "Umejr Dzinovic",
-    location: "Based in Kapfenberg, AT.",
+    location: "Based in Eggenberg, AT.",
   },
 
    desc: {
-    firstText: "I specialize in building stable backends with",
-    firstTech: "S-Boot",
+    firstText: "I like building stable backends with",
+    firstTech: "Next.js",
 
     secondText: "and creating sleek, modern frontends using",
     secondTech: "Next.js",
 
-    thirdText: "For a while now, I’ve been honing my skills across both sides of development, aiming to become a well-rounded",
+    thirdText: "For a while now, I’ve been honing my skills across both sides of coding, aiming to become a well-rounded",
     thirdTech: "Full Stack Dev",
 
-    forthText: "I love bringing ideas to life through clean, functional design — making sure every project not only works perfectly, but feels great to use.",
+    forthText: "I love bringing ideas to life through clean, functional design — making sure every thing not only works well, but feels great to use.",
   },
 
    metrics: [
