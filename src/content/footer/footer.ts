@@ -13,7 +13,7 @@ export const footerContent = {
     icon: Coffee
   },
   cr: {
-    text: "© 2025 Dev Resume — Designed by",
+    text: "© 2026 Dev Resume — Designed by",
     name: "Umejr"
   }
 
