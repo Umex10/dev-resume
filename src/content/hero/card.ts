@@ -1,4 +1,4 @@
-import { Github, Linkedin, Youtube, Instagram, Twitter, Download, Send, Mail } from "lucide-react"
+import { Github, Download, Send, Mail } from "lucide-react"
 
 export const heroCard = {
   image: {
@@ -24,11 +24,6 @@ export const heroCard = {
       name: "GitHub",
       href: "https://github.com/umex10",
       icon: Github,
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/umejr-dzinovic-4083a6343/",
-      icon: Linkedin,
     },
   ],
   actions: {

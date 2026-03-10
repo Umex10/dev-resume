@@ -21,10 +21,7 @@ import { handleLenisScroll } from "@/lib/lenisScroll";
         md:gap-6 lg:gap-2">
 
           <CardHeader>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
+            <div
               className="overflow-hidden w-full rounded-xl 
               shadow-md relative aspect-square ring-1 ring-border
               md:w-52 md:h-52 md:aspect-auto
@@ -36,9 +33,10 @@ import { handleLenisScroll } from "@/lib/lenisScroll";
                 alt="Umejr"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 208px, 352px"
                 className="object-cover"
               />
-            </motion.div>
+            </div>
           </CardHeader>
 
           <CardContent className="flex flex-col items-center justify-center gap-3">
