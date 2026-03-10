@@ -5,7 +5,7 @@ import { contactInfo } from "@/content/contact/contact";
 import { motion } from "framer-motion";
 
 import ContactForm from "./ContactForm";
-import { Send } from "lucide-react";
+import { Send, Clock, Zap, MessageCircle } from "lucide-react";
 import SectionHeading from "@/components/ui/section-heading";
 import { handleContactClick } from "@/lib/contactClick";
 
@@ -41,7 +41,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <Card
-                className="group relative w-full bg-neutral-900/50 cursor-pointer
+                className="group relative w-full bg-card cursor-pointer
   overflow-hidden transition-all duration-300
   hover:shadow-lg hover:scale-[1.01]"
                 onClick={() => handleContactClick(info)}
@@ -74,6 +74,43 @@ const Contact = () => {
               </Card>
             </motion.div>
           ))}
+
+          {/* Availability & Response Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-2 rounded-xl border border-border bg-card p-4 flex flex-col gap-3"
+          >
+            <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-500/15">
+                <Zap className="w-4 h-4 text-green-500" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold">Work</p>
+                <p className="text-xs text-muted-foreground">Internships, collabs & freelance</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-500/15">
+                <Clock className="w-4 h-4 text-green-500" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold">Contact back</p>
+                <p className="text-xs text-muted-foreground">Usually within 24 hours</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-500/15">
+                <MessageCircle className="w-4 h-4 text-green-500" />
+              </div>
+              <div>
+                <p className="text-sm font-semibold">Languages</p>
+                <p className="text-xs text-muted-foreground">German & English</p>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
 
         <ContactForm></ContactForm>

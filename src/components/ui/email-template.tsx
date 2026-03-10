@@ -4,7 +4,7 @@ import z from 'zod';
 type FormValues = z.infer<typeof formSchema>;
 
 
-export default function EmailTemplate({ fullName, email, number, message }: FormValues) {
+export default function EmailTemplate({ fullName, email, message }: FormValues) {
   return (
     <div
       style={{
@@ -55,11 +55,6 @@ export default function EmailTemplate({ fullName, email, number, message }: Form
           <p style={{ margin: "0 0 12px" }}>
             <strong style={{ color: "#10b981" }}>Email:</strong><br />
             {email}
-          </p>
-
-          <p style={{ margin: "0 0 12px" }}>
-            <strong style={{ color: "#10b981" }}>Phone:</strong><br />
-            {number}
           </p>
 
           <p style={{ margin: "0 0 12px" }}>

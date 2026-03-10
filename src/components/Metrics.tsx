@@ -19,7 +19,7 @@ export default function Metrics() {
       <span className="text-3xl font-extrabold tracking-tight flex items-center">
         <CountUp start={0} end={element.value} duration={7}
         decimals={String(element.value).includes(".") ? 2 : 0} />
-        <span className={`${String(element.value).includes(".") ? 2 : 0}`}>+</span>
+        {element.plus && <span>+</span>}
       </span>
 
       <span className="text-sm text-muted-foreground">

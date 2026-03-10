@@ -14,8 +14,12 @@ export const navItems = [
     href: "#apps"
   },
   {
-    text: "Skills",
-    href: "#skills"
+    text: "Journey",
+    href: "#journey"
+  },
+  {
+    text: "GitHub",
+    href: "#github"
   },
   {
     text: "Contact",

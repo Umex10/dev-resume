@@ -24,9 +24,9 @@ export const textContent = {
   },
 
    metrics: [
-    { value: 5, label: "Finished Apps", plus: true },
-    { value: 12, label: "Months in Coding", plus: true },
-    { value: 200, label: "Git Contributions", plus: true },
-    { value: 1.25, label: "Current GPA", plus: false },
+    { value: 7, label: "Finished Apps", plus: true },
+    { value: 16, label: "Months in Coding", plus: true },
+    { value: 777, label: "Git Contributions", plus: true },
+    { value: 1.19, label: "Current GPA", plus: false },
   ],
 };
