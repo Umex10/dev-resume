@@ -22,8 +22,8 @@ export const amounts = calculateAmounts();
 
 export const chartData = [
   { stack: "backend", value: amounts.backend, fill: "#22c55e" },
-  { stack: "frontend", value: amounts.frontend, fill: "#8b5cf6" },
-  { stack: "devops", value: amounts.devops, fill: "#9ca3af" },
+  { stack: "frontend", value: amounts.frontend, fill: "#16a34a" },
+  { stack: "devops", value: amounts.devops, fill: "#4ade80" },
 ]
 
 export const chartConfig = {

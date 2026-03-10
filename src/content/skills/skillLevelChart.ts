@@ -16,8 +16,8 @@ export const levels = calculateSkillLevel();
 
 export const chartData = [
   { type: "backend", value: levels.backend, fill: "#22c55e" },
-  { type: "frontend", value: levels.frontend, fill: "#8b5cf6" },
-  { type: "devops", value: levels.devops, fill: "#9ca3af" },
+  { type: "frontend", value: levels.frontend, fill: "#16a34a" },
+  { type: "devops", value: levels.devops, fill: "#4ade80" },
 ];
 
 export const chartConfig = {

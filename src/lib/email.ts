@@ -5,7 +5,7 @@ import EmailTemplate from "../components/ui/email-template";
 import { formSchema } from "@/lib/formSchema";
 import z from "zod";
 export async function sendEmail(data: z.infer<typeof formSchema>) {
-  const { fullName, email, number, message } = data;
+  const { fullName, email, message } = data;
 
   try {
 
@@ -13,7 +13,7 @@ export async function sendEmail(data: z.infer<typeof formSchema>) {
       from: "Umejr's Dev Resume <onboarding@resend.dev>",
       to: ["umi.dzinovic10@gmail.com"],
       subject: `New message from ${fullName}`,
-      react: EmailTemplate({fullName, email, number, message})
+      react: EmailTemplate({fullName, email, message})
     });
 
     if (error) {

@@ -69,22 +69,8 @@ export const calculateSkillLevel = () => {
 
 
 // returns a color scheme for the chart
-export const handleColor = (type: string): SkillColor => {
-   const category = categoryMap[type.toLowerCase()];
-
-  switch (category) {
-    case "frontend":
-      return violet;
-
-    case "backend":
-      return green;
-
-    case "devops":
-      return gray;
-
-    default:
-      return green;
-  }
+export const handleColor = (_type: string): SkillColor => {
+  return green;
 }
 
 type SkillColor = {

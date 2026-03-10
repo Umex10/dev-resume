@@ -18,6 +18,7 @@ import { useForm } from "react-hook-form";
 import { contactForm } from "@/content/contact/contact";
 import { formSchema } from "@/lib/formSchema";
 import { send } from "@/actions/send";
+import { Sparkles, Coffee, Rocket } from "lucide-react";
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -29,7 +30,6 @@ export default function ContactForm() {
     defaultValues: {
       fullName: "",
       email: "",
-      number: "",
       message: "",
     },
   });
@@ -41,7 +41,7 @@ export default function ContactForm() {
   }
 
   const formContent = contactForm;
-  const inputBg = "bg-neutral-900/50";
+  const inputBg = "bg-muted";
 
   return (
     <motion.div
@@ -92,25 +92,6 @@ export default function ContactForm() {
               )}
             />
 
-            {/* Number Field */}
-            <FormField
-              control={form.control}
-              name="number"
-              render={({ field }) => (
-                <FormItem>
-                  <FormControl>
-                    <Input
-                      type="tel"
-                      placeholder={formContent.input.number}
-                      className={`${inputBg} md:h-11 md:text-base`}
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
             {/* Message Field */}
             <FormField
               control={form.control}
@@ -120,7 +101,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Textarea
                       placeholder={formContent.input.message}
-                      className={`resize-none min-h-32 md:min-h-36 md:text-base bg-neutral-900/50 ${inputBg}`}
+                      className={`resize-none min-h-32 md:min-h-36 md:text-base ${inputBg}`}
                       {...field}
                     />
                   </FormControl>
@@ -142,6 +123,44 @@ export default function ContactForm() {
           </form>
         </Form>
       </Card>
+
+      {/* Motivational section to fill space */}
+      <motion.div
+        initial={{ opacity: 0, y: 15 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="mt-4 rounded-xl border border-border bg-card p-5 flex flex-col gap-4"
+      >
+        <p className="text-sm font-semibold text-foreground flex items-center gap-2">
+          <Sparkles className="w-4 h-4 text-green-500" />
+          What happens next?
+        </p>
+        <div className="flex flex-col gap-3">
+          <div className="flex items-start gap-3">
+            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/15 text-green-500 text-xs font-bold flex-shrink-0 mt-0.5">1</span>
+            <p className="text-xs text-muted-foreground">I&apos;ll receive your message and review it carefully.</p>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/15 text-green-500 text-xs font-bold flex-shrink-0 mt-0.5">2</span>
+            <p className="text-xs text-muted-foreground">Expect a message within 24 hours — usually sooner.</p>
+          </div>
+          <div className="flex items-start gap-3">
+            <span className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/15 text-green-500 text-xs font-bold flex-shrink-0 mt-0.5">3</span>
+            <p className="text-xs text-muted-foreground">We&apos;ll discuss how I can work for you.</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-4 pt-2 border-t border-border">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Coffee className="w-3.5 h-3.5 text-green-500" />
+            Open for coffee chats
+          </div>
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <Rocket className="w-3.5 h-3.5 text-green-500" />
+            Ready for the next level!
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }
