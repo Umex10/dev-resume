@@ -11,6 +11,22 @@ interface App {
 
 export const apps: App[] = [
   {
+    title: "💬 Chatex — Social Website",
+    desc: "A social website with a stateless JWT auth system — CSRF disabled, CORS locked to the frontend. Access tokens (15 min) paired with HttpOnly refresh tokens (30 days). Users can post Shouts and manage their profile (avatar, banner, bio, location).",
+    image: "/chatex.png",
+    tags: ["S-Boot", "S-Boot-Security", "Next.js", "RTK Queries", "JWT"],
+    demo: "https://chatex-five.vercel.app",
+    github: "https://github.com/Umex10/chatex",
+  }, 
+   {
+    title: "Smart Kassa",
+    desc: "A team-driven website building a smart checkout system for taxi workflows. I built the Leaflet-based location tracking, the ride summary system, and handled most of the UI design.",
+    image: "/smart-kassa.png",
+    tags: ["Node.js Backend", "Vite", "SQL", "Scrum"],
+    demo: "https://smart-kassa.vercel.app",
+    github: "https://github.com/zynqly-smartkassa/smart-kassa",
+  },
+  {
     title: "Weather App",
     desc: "A minimal weather tool that shows current conditions and a clean multi-day forecast for any city.",
     image: "/weather.jpg",
@@ -40,13 +56,5 @@ export const apps: App[] = [
     tags: ["HTML5", "Tailwind", "Vanilla JS"],
     demo: "https://umexis.vercel.app",
     github: "https://github.com/Umex10/Umexis",
-  },
-  {
-    title: "Smart Kassa",
-    desc: "A student project creating a smart checkout system for taxi workflows, developed with a team of three.",
-    image: "/smart-kassa.png",
-    tags: ["Node.js Backend", "Vite", "SQL"],
-    demo: "https://smart-kassa.vercel.app",
-    github: "https://github.com/zynqly-smartkassa/smart-kassa",
   },
 ];
