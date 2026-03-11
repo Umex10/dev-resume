@@ -181,21 +181,21 @@ export default function Apps() {
         ))}
       </div>
       {/* Show More Button */}
-      {visibleCount < 5 && (
+      {visibleCount < 6 && (
         <motion.div
           className="flex justify-center"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
         >
-          <Button variant="secondary" onClick={() => setVisibleCount(5)}>
+          <Button variant="secondary" onClick={() => setVisibleCount(6)}>
             Show more
           </Button>
         </motion.div>
       )}
 
       {/* Show Less Button */}
-      {visibleCount >= 5 && (
+      {visibleCount >= 6 && (
         <motion.div
           className="flex justify-center"
           initial={{ opacity: 0, y: 10 }}
