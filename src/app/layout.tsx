@@ -3,6 +3,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dev-resume-sigma.vercel.app"),
@@ -39,6 +40,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet" />
       </head>
       <body className="min-h-screen flex flex-col">
+        <Analytics></Analytics>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SmoothScroll />
           {children}
