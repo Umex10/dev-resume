@@ -11,8 +11,16 @@ interface App {
 
 export const apps: App[] = [
   {
+    title: "LeetCode & DSA Exercises",
+    desc: "A website where I document my solved LeetCode issues in detail. Each solution is written in Java and includes a thorough vision of the code as well as time and memory analysis.",
+    image: "/leetcode.png",
+    tags: ["Java", "DSA", "Algorithms", "Next.js"],
+    demo: "https://dsa-exercises-website.vercel.app",
+    github: "https://github.com/Umex10/dsa-exercises-website",
+  },
+  {
     title: "💬 Chatex — Social Website",
-    desc: "A social website with a stateless JWT auth system — CSRF disabled, CORS locked to the frontend. Access tokens (15 min) paired with HttpOnly refresh tokens (30 days). Users can post Shouts and manage their profile (avatar, banner, bio, location).",
+    desc: "A social website with a stateless JWT auth system — CSRF disabled, CORS locked to the frontend. Access tokens (15 min) paired with HttpOnly refresh tokens (30 days).",
     image: "/chatex.png",
     tags: ["S-Boot", "S-Boot-Security", "Next.js", "RTK Queries", "JWT"],
     demo: "https://chatex-five.vercel.app",
