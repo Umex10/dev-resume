@@ -72,3 +72,46 @@
     transform: translateY(-18.82rem);
   }
 }
+
+@keyframes float-orb-1 {
+  0%   { transform: translate(0px, 0px); }
+  25%  { transform: translate(60px, -40px); }
+  50%  { transform: translate(120px, 20px); }
+  75%  { transform: translate(40px, 60px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes float-orb-2 {
+  0%   { transform: translate(0px, 0px); }
+  20%  { transform: translate(-80px, 50px); }
+  50%  { transform: translate(-40px, -60px); }
+  80%  { transform: translate(60px, -30px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes float-orb-3 {
+  0%   { transform: translate(-50%, 0px); }
+  33%  { transform: translate(calc(-50% + 70px), -50px); }
+  66%  { transform: translate(calc(-50% - 50px), 40px); }
+  100% { transform: translate(-50%, 0px); }
+}
+
+@keyframes float-orb-4 {
+  0%   { transform: translate(0px, 0px); }
+  30%  { transform: translate(50px, 70px); }
+  60%  { transform: translate(-60px, 30px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+@keyframes float-orb-5 {
+  0%   { transform: translate(0px, 0px); }
+  40%  { transform: translate(-70px, -50px); }
+  70%  { transform: translate(40px, -80px); }
+  100% { transform: translate(0px, 0px); }
+}
+
+.animate-float-orb-1 { animation: float-orb-1 10s ease-in-out infinite; }
+.animate-float-orb-2 { animation: float-orb-2 13s ease-in-out infinite; }
+.animate-float-orb-3 { animation: float-orb-3 16s ease-in-out infinite; }
+.animate-float-orb-4 { animation: float-orb-4 9s ease-in-out infinite; }
+.animate-float-orb-5 { animation: float-orb-5 12s ease-in-out infinite; }
