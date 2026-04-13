@@ -80,7 +80,7 @@ export const milestones: Milestone[] = [
     date: "Mar 2026",
     title: "777+ Contributions & Counting (STREAK)",
     description:
-      "Passed 777 contributions on GitHub across my reps.",
+      "1227 contributions on GitHub across my reps.",
     icon: Sparkles,
   },
 ];
