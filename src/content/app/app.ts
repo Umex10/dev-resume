@@ -23,6 +23,7 @@ export const apps: App[] = [
     desc: "Modern note-taking where markdown meets AI. Firebase handles the entire backend — auth, database, protected routes, user-scoped data — all without running a server. Google Gemini is wired in for context-aware content generation. Export to PDF, DOCX, Markdown or plain text, full tag system, dark/light theme with Framer Motion animations.",
     image: "/renderex.png",
     tags: ["Next.js", "TS", "Firebase", "Redux", "Gemini AI", "Framer Motion", "Tailwind"],
+    demo: "https://renderex.vercel.app",
     github: "https://github.com/Umex10/renderex",
   },
   {
