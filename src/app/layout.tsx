@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: [
     "Dev Resume",
     "Full Stack Dev",
-    "Spring Boot",
+    "S-Boot",
     "Next.js",
     "Software Engineer",
     "Umejr Dzinovic",
@@ -32,6 +32,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <head>

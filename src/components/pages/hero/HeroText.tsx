@@ -10,6 +10,8 @@ import { textContent } from "@/content/hero/text";
 
 const identity = textContent.identity;
 const desc = textContent.desc;
+const githubStreakText = typeof desc.thirdTech === "function" ? desc.thirdTech() : desc.thirdTech;
+const githubStreakMonthsText = typeof desc.forthText === "function" ? desc.forthText() : desc.forthText;
 
 const HeroText = () => {
   return (
@@ -68,8 +70,8 @@ const HeroText = () => {
           {desc.secondText}
           <span className="font-medium text-foreground italic"> {desc.secondTech}</span>.
           {" "}{desc.thirdText}
-          <span className="font-medium text-foreground italic"> {desc.thirdTech}</span>.
-          {" "}{desc.forthText}
+          <span className="font-medium text-foreground italic"> {githubStreakText}</span>.
+          {" "}{githubStreakMonthsText}
         </motion.p>
     
           <Metrics></Metrics>
