@@ -134,7 +134,7 @@ export default function GitHubContent({ stats }: { stats: GitHubStats }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 viewport={{ once: true }}
-              >
+              > 
                 <Card
                   className="group relative overflow-hidden cursor-pointer
                     hover:shadow-lg transition-all duration-300 hover:scale-[1.01] h-full"
@@ -197,10 +197,10 @@ export default function GitHubContent({ stats }: { stats: GitHubStats }) {
         <p className="text-sm text-muted-foreground">
           Member since {memberYear}
         </p>
-        <a href={stats.profileUrl} target="_blank" rel="noopener noreferrer">
+        <a href={stats.accountUrl} target="_blank" rel="noopener noreferrer">
           <Button variant="outline" size="lg" className="gap-2">
             <Github className="w-5 h-5" />
-            View Full Profile
+            View Full Account
             <ArrowUpRight className="w-4 h-4" />
           </Button>
         </a>

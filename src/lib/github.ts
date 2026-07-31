@@ -19,7 +19,7 @@ export interface GitHubStats {
   totalStars: number;
   topLanguages: { name: string; count: number }[];
   featuredRepos: GitHubRepo[];
-  profileUrl: string;
+  accountUrl: string;
   memberSince: string;
 }
 
@@ -80,7 +80,7 @@ export async function getGitHubStats(): Promise<GitHubStats> {
       totalStars,
       topLanguages,
       featuredRepos,
-      profileUrl: `https://github.com/${GITHUB_USERNAME}`,
+      accountUrl: `https://github.com/${GITHUB_USERNAME}`,
       memberSince: user.created_at,
     };
   } catch {
@@ -99,6 +99,6 @@ const FALLBACK: GitHubStats = {
     { name: "HTML", count: 1 },
   ],
   featuredRepos: [],
-  profileUrl: "https://github.com/Umex10",
+  accountUrl: "https://github.com/Umex10",
   memberSince: "2024-12-20T20:07:21Z",
 };
