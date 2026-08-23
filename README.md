@@ -4,6 +4,12 @@
 
 This rep is a developer resume built with Next.js. It showcases apps, skills, and contact functionality (email via Resend). The site is designed as a modern single-page resume built with reusable React com's and Tailwind CSS.
 
+<div align="center">
+  <img src="docs/screenshots/devresume-dark.jpg" width="100%" alt="Dev Resume — hero section in dark mode"/>
+  <br/>
+  <sub>Hero section — intro, availability status and quick stats.</sub>
+</div>
+
 Key highlights:
 - Clean, com-driven UI (header, hero, apps, skills, contact, footer).
 - Interactive app cards with animations (Framer Motion).
