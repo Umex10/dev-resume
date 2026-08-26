@@ -1,5 +1,4 @@
 import { Mail } from 'lucide-react';
-import { LocateFixed } from 'lucide-react';
 
 export const contactInfo = [
     {
@@ -7,12 +6,6 @@ export const contactInfo = [
       label: "Email",
       value: "umi.dzinovic10@gmail.com",
       type: "email"
-    },
-    {
-      icon: LocateFixed,
-      label: "Location",
-      value: "[removed]",
-      type: "address"
     },
   ];
 

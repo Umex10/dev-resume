@@ -79,24 +79,8 @@ import { handleLenisScroll } from "@/lib/lenisScroll";
               transition={{ delay: 0.35 }}
               className="w-full"
             >
-              {/* Download CV */}
-              <a href="umejr-dzinovic-cv.pdf" download>
-                  <Button type="submit" variant="green" className="w-full text-zinc-800 min-w-[100px]">
-                {<heroCard.actions.download.icon></heroCard.actions.download.icon>}
-                {heroCard.actions.download.label}
-              </Button>
-              </a>
-            
-            </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.45 }}
-              className="w-full"
-            >
-
-              <Button variant="outline" className="w-full text-zinc-800 dark:text-zinc-200 min-w-[100px]"
+              <Button type="submit" variant="green" className="w-full text-zinc-800 min-w-[100px]"
               onClick={(e) => handleLenisScroll(e, "#contact")}>
                 {<heroCard.actions.contact.icon></heroCard.actions.contact.icon>}
                 {heroCard.actions.contact.label}

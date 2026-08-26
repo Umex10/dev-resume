@@ -1,4 +1,4 @@
-import { Github, Download, Send, Mail } from "lucide-react"
+import { Github, Send, Mail } from "lucide-react"
 
 export const heroCard = {
   image: {
@@ -27,17 +27,11 @@ export const heroCard = {
     },
   ],
   actions: {
-   download: {
-      label: "Download CV",
-      icon: Download,
-      href: "/Umejr-Dzinovic-CV.pdf", 
-      variant: "default",
-    },
    contact: {
       label: "Contact Me",
       icon: Send,
       href: "mailto:umi.dzinovic10@gmail.com",
-      variant: "outline",
+      variant: "default",
     },
   },
 }
